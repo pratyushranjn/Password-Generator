@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "VT323", monospace; /* Default to VT323 for a hacker-like style */
+    color: white;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.lock {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.2);
+    /* backdrop-filter: blur(10px); */
+    height: 60vh;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.lock h1 {
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+
+    position: relative;
+    top: -30px;
+}
+
+.lock:hover {
+    transform: scale(1.03);
+    border: 2px solid #00ff00;
+    box-shadow: 0 0 8px #00ff00, inset 0 0 8px #00ff00;
+}
+
+h1 {
+    font-family: "Passion One", sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#inp-box {
+    background-color: rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    border: none;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    color: #00ff00; /* Green text for the hacker vibe */
+    text-align: center;
+    outline: none;
+    font-size: 1.1rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+ #inp-box::placeholder {
+    color: rgba(0, 255, 0, 0.7); /* Greenish placeholder */
+
+} 
+
+#inp-box:hover {
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+#button {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    height: 50px;
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-family: 'Passion One', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+#button:hover {
+    /* background: #029802; */
+    /* color: black; */
+    border: 0.5px solid #00ff00; 
+   
+
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px #00ff00;
+}
+
+
+
+@media (max-width: 768px) {
+    .lock {
+        height: 70vh;
+        width: 90%;
+    }
+
+    #inp-box, #button {
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lock {
+        height: 75vh;
+        width: 95%;
+        border: 2px solid blueviolet;
+    }
+
+    #inp-box, #button {
+        font-size: 14px;
+        height: 40px;
+    }
+}
+
